@@ -1,0 +1,22 @@
+{
+  "name": "frontend-framework-poc",
+  "version": "1.0.0",
+  "description": "Front end frameworks comparision NG-1,2 and 4 vs React",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Angular",
+    "1",
+    "2",
+    "4",
+    "React",
+    "JS",
+    "Front",
+    "End",
+    "Framework"
+  ],
+  "author": "Vishal R",
+  "license": "MIT"
+}
