@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="page-header">
+                <h3>Welcome, Tony Stark</h3>
+            </div>
+        </div>
+    </div>
+    <table class="table table-hover table-striped table-bordered ">
+        <thead>
+            <tr>
+                <th data-sort-ignore="true">Customer Name</th>
+                <th data-type="alpha">Plan</th>
+                <th>State</th>
+                <th data-sort-ignore="true">Type</th>
+                <th>Subscribed On</th>
+                <th>Edit</th>
+            </tr>
+        </thead>
+        <tbody>
+             <tr ng-repeat="value in data">
+                <td>{{value.name}}</td>
+                <td>{{value.plan}}</td>
+                <td>{{value.state}}</td>
+                <td>{{value.type}}</td>
+                <td>{{value.subscribedOn | date:'longDate' }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
