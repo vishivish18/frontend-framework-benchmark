@@ -16,9 +16,13 @@ apiRoutes = function(router) {
     // ## Data
     router.post('data/create', api.data.create);
     //router.get('data/update', api.data.update);
-    router.get('data/list', api.data.index);
+    // router.get('data/list', api.data.index);
+    router.get('data/list', function(){
+        console.log("hit*******")
+    });
+
     //router.delete('data/delete', api.data.delete);
-    
+
     return router;
 };
 

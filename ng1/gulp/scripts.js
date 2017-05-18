@@ -9,11 +9,11 @@ gulp.task('js', function() {
         .pipe(sourcemaps.init())
         .pipe(concat('app.js'))
         .pipe(ngAnnotate())
-        .pipe(uglify())
+        //.pipe(uglify())
         .pipe(sourcemaps.write())
         .pipe(gulp.dest('public/assets'))
 })
 
 gulp.task('watch:js', ['js'], function() {
-    gulp.watch('ng/**/*.js', ['js'])
+    gulp.watch('public/app/**/*.js', ['js'])
 })

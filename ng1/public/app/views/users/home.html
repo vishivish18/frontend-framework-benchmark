@@ -6,6 +6,7 @@
             </div>
         </div>
     </div>
+    <hello-world> </hello-world>
     <table class="table table-hover table-striped table-bordered ">
         <thead>
             <tr>
@@ -14,16 +15,17 @@
                 <th>State</th>
                 <th data-sort-ignore="true">Type</th>
                 <th>Subscribed On</th>
-                <th>Edit</th>
+                <th>Details</th>
             </tr>
         </thead>
         <tbody>
-             <tr ng-repeat="value in data">
-                <td>{{value.name}}</td>
-                <td>{{value.plan}}</td>
+             <tr ng-repeat="value in data track by $index" on-finish-render="ngRepeatFinished"> 
+                <td>{{value.name.first}}</td>
+                <td>{{value.field_title}}</td>
                 <td>{{value.state}}</td>
-                <td>{{value.type}}</td>
-                <td>{{value.subscribedOn | date:'longDate' }}</td>
+                <td>{{value.customer_type}}</td>
+                <td>{{value.date_joined | date:'longDate' }}</td>
+                <td><a ng-href="/home/details/{{value._id}}">Details</a></td>
             </tr>
         </tbody>
     </table>

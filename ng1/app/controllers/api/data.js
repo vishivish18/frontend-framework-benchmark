@@ -1,5 +1,5 @@
 var router = require('express').Router()
-var Data = require('../../models/data')
+var Customer = require('../../models/customer')
 var data
 
 
@@ -25,16 +25,12 @@ data = {
         })
     },
     index: function(req, res, next) {
-        Data.find({
-            username: req.auth.username
-        }, function(err, data) {
-            if (err) {
-                return next(err)
-            } else {
-                res.json(data)
-            }
-
-        })
+        console.log("here")
+        Customer.find({})
+            .limit(20)
+            .exec(function(err, cust) {
+                res.json(cust)
+            });
     }
 }
 

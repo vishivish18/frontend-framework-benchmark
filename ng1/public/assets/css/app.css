@@ -14,5 +14,15 @@ p {
     background-color: white !important;
     border-color: #e4e4e4;
 }
+.wrapper{
+	padding: 15px;
+}
+.bottom-seperator{
+	border-bottom:1px solid #efefef;
+}
 
-
+/*table {
+  display: block;
+  height: 200px;
+  overflow-y: scroll;
+}*/
