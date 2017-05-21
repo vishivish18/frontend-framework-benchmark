@@ -4,6 +4,7 @@ angular.module('app')
             console.log(response)
             $scope.customer = response.data[0];
 
+
             function generateRandmCode() {
                 var possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
                 var stringLength = 5;
@@ -17,4 +18,25 @@ angular.module('app')
             }
             $scope.customer.ernrollment_id = generateRandmCode()
         })
+        $scope.numberOne = 500
+        $scope.numberTwo = 500
+        $scope.getNumberOne = function(num) {
+        	num = parseInt(num, 10)
+            console.log("running getnum", typeof(num))
+            return new Array(num);
+        }
+        $scope.getNumberTwo = function(num) {
+        	num = parseInt(num, 10)
+            console.log("running getnum", typeof(num))
+            return new Array(num);
+        }
+
+        $scope.$watch('numberOne', function(newValue, oldValue) {
+            if (newValue) {
+                console.log('changed');               
+            } else {
+                console.log('not changed')
+            }
+        })
+
     })

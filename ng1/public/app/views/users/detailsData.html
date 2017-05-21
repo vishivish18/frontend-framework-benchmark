@@ -76,6 +76,19 @@ table {
                     <div class="row">
                         <h4 align="center">Invoices</h4>
                         <div class="col-md-12">
+                            <div class="form-group col-xs-3">                                
+                                <label for="singleSelect">Number of Rows</label>
+                                <br>
+                                <select name="singleSelect" ng-model="numberOne">
+                                    <option value="100">100 Rows</option>
+                                    <option value="500">500 Rows</option>
+                                    <option selected value="1000">1000 Rows
+                                    </option>
+                                    <option value="5000">5000 Rows</option>
+                                    <option value="10000">10000 Rows</option>
+                                </select>
+                                <br>
+                            </div>
                             <table class="table table-hover table-striped table-bordered ">
                                 <thead>
                                     <tr>
@@ -87,7 +100,7 @@ table {
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr ng-repeat="n in [].constructor(1000) track by $index" class="nos">
+                                    <tr ng-repeat="i in getNumberOne(numberOne) track by $index" class="nos">
                                         <td width="300"><a href=#>#{{$index + 1}}<p>Lorem ipsum dolor sit amet.</p></a></td>
                                         <td width="300">{{$index + 2}}
                                             <p>Lorem ipsum dolor sit amet.</p>
@@ -118,16 +131,18 @@ table {
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr ng-repeat="n in [].constructor(1000) track by $index" class="nos">
-                                        <td width="300"><a href=#>#{{$index + 5}}</a></td>
+                                    <tr ng-repeat="i in getNumberOne(numberOne) track by $index" class="nos">
+                                        <td width="300"><a href=#>#{{$index + 1}}</a></td>
                                         <td width="300">{{$index + 6}}
                                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut.
                                             </p>
                                         </td>
-                                        <td width="300">{{$index + 7}}p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut.
+                                        <td width="300">{{$index + 7}}
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut.
                                             </p>
                                         </td>
-                                        <td width="300">{{$index + 9}}p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut.
+                                        <td width="300">{{$index + 9}}
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut.
                                             </p>
                                         </td>
                                         <td width="100"><img height="100" src="http://pre15.deviantart.net/f17a/th/pre/f/2016/131/d/5/captain_america_shield_by_seehawk-da254el.png"></td>
