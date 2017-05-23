@@ -22,7 +22,7 @@ app.use(bodyParser.urlencoded({
 
 app.get('/data/list', function(req, res) {
     Customer.find({})
-        .limit(500)
+        .limit(10000)
         .exec(function(err, cust) {
             res.json(cust)
         });

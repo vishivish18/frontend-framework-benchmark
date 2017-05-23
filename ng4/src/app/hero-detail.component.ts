@@ -1,8 +1,8 @@
-import {Component} from '@angular/core';
-
+import { Component, Input } from '@angular/core';
+import { Hero } from './hero';
 @Component({
-	selector: 'hero-detail',
-	template: `
+  selector: 'hero-detail',
+  template: `
     <div *ngIf="hero">
       <h2>{{hero.name}} details!</h2>
       <div><label>id: </label>{{hero.id}}</div>
@@ -13,7 +13,6 @@ import {Component} from '@angular/core';
     </div>
   `
 })
-
-export class HeroDetailComponent{
-
+export class HeroDetailComponent {
+  @Input() hero: Hero;
 }

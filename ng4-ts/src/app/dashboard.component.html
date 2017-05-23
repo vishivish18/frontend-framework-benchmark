@@ -11,7 +11,7 @@
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let hero of heroes" [routerLink]="['/detail', hero._id]">
+            <tr *ngFor="let hero of heroes" [routerLink]="['/detail', hero._id]">                
                 <td>{{hero.name.first}}</td>
                 <td>{{hero.field_title}}</td>
                 <td>{{hero.state}}</td>
@@ -21,4 +21,3 @@
         </tbody>
     </table>
 </div>
-<hero-search></hero-search>
