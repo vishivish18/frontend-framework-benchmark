@@ -19,6 +19,7 @@
     "webpack": "^2.6.0"
   },
   "dependencies": {
+    "axios": "^0.16.1",
     "babel-core": "^6.24.1",
     "express": "^4.15.3",
     "history": "^4.6.1",
