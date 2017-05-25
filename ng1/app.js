@@ -29,7 +29,6 @@ app.get('/data/list', function(req, res) {
 })
 
 app.get('/data/show/:id', function(req, res) {
-	console.log("in here NOW")
     Customer.find({ _id: req.params.id }, function(err, client) {
         if (err) {
             return next(err)
